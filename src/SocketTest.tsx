@@ -1,11 +1,9 @@
 import React from 'react';
 
-import logo from './logo.svg';
-import './App.css';
 import io from 'socket.io-client'; 
 
 
-class App extends React.Component<any , any> {
+class SocketTest extends React.Component<any , any> {
   socket: SocketIOClient.Socket | null = null;
   
  
@@ -21,7 +19,7 @@ class App extends React.Component<any , any> {
   }
   componentDidMount(){
      
-    const socket = io("http://localhost:3000" , {path : "/server-path"});     
+    const socket = io("http://localhost:3000" );     
     socket.on("connect" , () => {
        console.log("connected to server"); 
        this.setState({connected : true}); 
@@ -72,4 +70,4 @@ class App extends React.Component<any , any> {
 }
 
 
-export default App;
+export default SocketTest;
