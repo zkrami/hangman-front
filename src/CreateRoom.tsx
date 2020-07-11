@@ -10,6 +10,7 @@ class CreateRoom extends React.Component<any , any> {
   }
  
  async create(){    
+    
     let response = await axios.post("http://localhost:3000/api/room"); 
     let room = response.data.room; 
     this.props.history.push('/room/' + room);  // redirect to /room/:room 

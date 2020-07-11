@@ -1,0 +1,16 @@
+.control-wrapper {
+    width: 100%;
+    display: flex;
+
+}
+
+.control-wrapper div {
+    padding: 10px;
+    border: solid 2px #000;
+    font-size:20px;
+    cursor: pointer;
+}
+.control-wrapper div.success{
+    background: green;
+    color:#fff;
+}
